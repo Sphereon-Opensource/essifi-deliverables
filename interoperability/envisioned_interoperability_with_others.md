@@ -14,5 +14,7 @@ Beyond the interface compatibility of Sphereon's PE REST API, we would also seek
 
 ### Beyond eSSIF Labs
 
-One of the eventual goals of our project is to bridge the gap between the W3C-CCG specifications (such as the VC-HTTP-API) and the Hyperledger Aries specifications/implementations. For this purpose, a new work item has been created with in the DIF Claims and Credentials working group 
+One of the eventual goals of our project is to bridge the gap between the W3C-CCG specifications (such as the VC-HTTP-API) and the Hyperledger Aries specifications/implementations. For this purpose, a new work item has been created within the DIF Claims and Credentials working group. This will involve collaboration with representatives in a broad range of SSI spaces (DIF/W3C-CCG/Aries) who seek to define a new test suite and extend/adapt existing specifications and protocols in W3C and Aries to enable compatibility and standardization around verifier/holder interactions.
+
+Sphereon's participation in the group would enable us to broaden the target audience of eSSIF Labs interoperability efforts, and provide a channel for communication and alignment between internal eSSIF Lab members and the broader SSI community.
 
