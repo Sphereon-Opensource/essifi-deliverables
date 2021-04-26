@@ -1,6 +1,8 @@
-Deliverables
-============
+# NGI eSSIF Labs Deliverables - Sphereon
 
-Use this repo to store formal documents requested by eSSIF.
+This repo contains all formal deliverables provided by Sphereon as part of the NGI eSSIF Labs Infrastructure project.
 
-Please begin by filling out the templates included in the repo.
+## Table of Contents
+* [Envisioned Interoperability w/ Others](./interoperability/envisioned_interoperability_with_others.md)
+* [Interface Specifications](./interface_specifications/README.md)
+* [Functional Specifications](./functional_specifications/README.md)
