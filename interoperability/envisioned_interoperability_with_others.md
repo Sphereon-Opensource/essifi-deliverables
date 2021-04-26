@@ -6,6 +6,13 @@ Sphereon's eSSIF Infrastructure project focuses on the interaction between holde
 Given the opensource specifications and standards on which our project relies, as well as the common need for holder-verifier interactions in any SSI architecture, we see an abundance of possible interoperability avenues to pursue with members both inside and outside the eSSIF Labs cohort.
 
 ### Presentation Exchange API Interop
-The goal of interoperability is to provide a reliable mechanism for inter-implementation communication and compatibility, as well as 
+One fundamental goal in interoperability initiatives is to test the compatibility of independent implementations of the same specification. This lays the groundwork for refinement of specifications and gives a reliable basis for future implementations and adoption of the specification.
 
+From this perspective of interoperability, we see a strong directional alignment between Sphereon's Presentation Exchange API and the [Presentation Exchange working package](https://gitlab.grnet.gr/essif-lab/infrastructure_2/gataca/Verifier_Universal_Interface/-/tree/master/WP1-PresentationExchange) of Gataca's Verifier Universal Interface initiative (VUI). Sphereon's participation in the working package would enable both better refinement and compatibility of our own Presentation Exchange REST API interface, as well as contribute to the VUI goals regarding multiple independent implementations.
+
+Beyond the interface compatibility of Sphereon's PE REST API, we would also seek to demonstrate mutual interoperability of the underlying Presentation Exchange specification logic as part of the VUI work package. This would involve participation and collaboration in writing test suites and designing protocols that can probe the underlying presentation request and credential query logic implemented in our Presentation Exchange Library.
+
+### Beyond eSSIF Labs
+
+One of the eventual goals of our project is to bridge the gap between the W3C-CCG specifications (such as the VC-HTTP-API) and the Hyperledger Aries specifications/implementations. For this purpose, a new work item has been created with in the DIF Claims and Credentials working group 
 
