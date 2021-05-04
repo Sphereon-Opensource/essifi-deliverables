@@ -76,10 +76,17 @@ const presentationDefinition = {
 const credentials = await secureStore.getCredentials();
 
 // Find matching credentials
-const selected = pejs.selectFrom(presentationDefinition, credentials);
+const srMatches = pejs.selectFrom(presentationDefinition, credentials);
+
+// An example that selects the first 'count' credentials from
+// the matches. in a real scenario, the user has to select what 
+// to disclose
+const selectedCredentials = srMatches.map(
+  ({matches, count}) => matches.slice(0, count)
+).flat();
 
 // Construct presentation submission from selected credentials
-const presentationSubmission = pejs.submissionFrom(presentationDefinition, selected.credentials());
+const presentationSubmission = pejs.submissionFrom(presentationDefinition, selectedCredentials);
 
 const presentation = {
   "@context": [
@@ -106,13 +113,13 @@ const presentationDefinition = {
   ...
 };
 
-const {checks, warnings, errors} = pejs.validate(presentationDefinition);
+const {warnings: pdWarnings, errors: pdErrors} = pejs.validate(presentationDefinition);
 
 const presentationSubmission = {
   ...
 };
 
-const {checks, warnings, errors} = pejs.validate(presentationSubmission);
+const {warnings: psWarnings, errors: psErrors} = pejs.validate(presentationSubmission);
 ```
 
 ## API
