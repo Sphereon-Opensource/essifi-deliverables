@@ -3,5 +3,5 @@ Below you can find the links to the attached interface specifications for the co
 
 ## Table of Contents
 * Presentation Exchange Models Library + Generator
-* Presentation Exchange Library
+* [Presentation Exchange Library](./interface_specification_of_pe_library_component.md)
 * Presentation Exchange REST API
