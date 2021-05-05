@@ -65,7 +65,6 @@ const {value, warnings, errors} = pejs.evaluate(presentationDefinition, verifiab
 A credential query allows holders to filter their set of credentials for matches to a given presentation definition.
 ```typescript
 import pejs from 'pe-js';
-import vcjs from 'vc-js';
 
 // Definition from verifier request
 const presentationDefinition = {
@@ -98,7 +97,7 @@ const presentation = {
     "PresentationSubmission"
   ],
   presentation_submission: presentationSubmission,
-  verifiableCredential: selected.credentials()
+  verifiableCredential: selectedCredentials
 };
 
 // Presentation would be signed and sent to verifier
