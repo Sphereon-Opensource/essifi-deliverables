@@ -22,17 +22,17 @@ cd target/sdks/models/typescript
 npm pack
 ```
 
-Expected result is that a file `/target/sdks/models/typescript/pe-models-M.m.p.tgz` is generated where `M.m.p` is arbitrary which can be installed in the consumer project like so:
+Expected result is that a file `/target/sdks/models/typescript/sphereon-pe-models-M.m.p.tgz` is generated where `M.m.p` is arbitrary which can be installed in the consumer project like so:
 
 ```
 cd my-pe-models-consumer-prj
-npm install --save '<workspace>/pe-api/target/sdks/models/typescript/pe-models-M.m.p.tgz'
+npm install --save '<workspace>/pe-api/target/sdks/models/typescript/sphereon-pe-models-M.m.p.tgz'
 ```
 
 Importing and using the model
 
 ```
-import {JwtObject} from 'pe-models'
+import {JwtObject} from '@sphereon/pe-models'
 
 var jwtObject : JwtObject = {
     alg : ['someAlgorithm']
