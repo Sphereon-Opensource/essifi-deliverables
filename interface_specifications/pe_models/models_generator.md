@@ -6,7 +6,7 @@
 
 ### TypeScript
 
-Models generator(i.e. pe-api) is a maven based project. To set it up locally for development, run following commands.
+PE-API, which contains an OpenAPI 3 models generator for Presentation Exchange objects is a maven based project. To set it up locally for development, run the following commands.
 
 ```
 cd '<workspace>'
@@ -14,7 +14,7 @@ git clone git@github.com:Sphereon-Opensource/pe-api.git
 cd pe-api
 ```
 
-POM file in the root of the project contains profiles section which lists the configuration to create models. Following is an example to generate the models in `Typescript` language by selecting `models-typescript` profile. The command will generate the models in `<workspace>/pe-api/target/sdks/models/typescript`.
+The POM.xml maven file in the root of the project contains a profiles section which lists the configuration and target programming languages to create different models packages. The following is an example to generate the models in the `Typescript` language by selecting the `models-typescript` profile. The command will generate the models in the directory `<workspace>/pe-api/target/sdks/models/typescript`.
 
 ```
 mvn install -P models-typescript
@@ -22,7 +22,7 @@ cd target/sdks/models/typescript
 npm pack
 ```
 
-Expected result is that a file `/target/sdks/models/typescript/sphereon-pe-models-M.m.p.tgz` is generated where `M.m.p` is arbitrary which can be installed in the consumer project like so:
+Expected result is that a file `/target/sdks/models/typescript/sphereon-pe-models-M.m.p.tgz` is generated where `M.m.p` is the current version which can be installed in the consumer project like so:
 
 ```
 cd my-pe-models-consumer-prj
@@ -42,5 +42,5 @@ console.log(jwtObject);
 ```
 
 
-To generate models for in other languages please see [Swagger-codegen](https://github.com/swagger-api/swagger-codegen). 
+To generate models for other programming languages please see [Swagger-codegen](https://github.com/swagger-api/swagger-codegen). 
 
