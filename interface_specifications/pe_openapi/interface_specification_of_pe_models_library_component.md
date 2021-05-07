@@ -1,6 +1,7 @@
-# Using Pre-published Models
+# Using Pre-published PE-Models
 
 Pre-published models can be used in your desired project from various sources. For example 'TypeScript' models can be used from [NPMJS @sphereon/pe-models](https://www.npmjs.com/package/@sphereon/pe-models).
+
 
 ### Published Models and languages
 
@@ -9,7 +10,7 @@ Pre-published models can be used in your desired project from various sources. F
 
 ### TypeScript
 
-This is an example where you create a new `NPM` project, import and use the `JwtObject` model from a pre-published `node-module`. Similarly, you can import and use other models.
+This is an example where you create a new `NPM` project, import and use the `JwtObject` pe-model from a pre-published `node-module`. Similarly, you can import and use other models.
 
 ```
 cd '<workspace>'
