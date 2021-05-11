@@ -1,0 +1,40 @@
+#https://sequencediagram.org/
+
+title Presentation Exchange REST API Flow
+
+participant Holder
+participant Verifier
+participant PE REST API
+
+
+Verifier->PE REST API: Create session (Presentation Definition)
+Verifier<--PE REST API: Challenge token url
+
+
+Holder<-Verifier: Share challenge token url
+
+
+Holder->PE REST API: Get challenge token
+Holder<--PE REST API: Challenge token (presentation definition)
+
+
+Holder-->Holder: Verify challenge + presentation definition
+Holder-->Holder: Construct presentation submission
+
+Holder->PE REST API: Presentation submission ( VP )
+
+
+Verifier<--PE REST API: ( Optional ) Notify submission status
+
+
+Verifier->PE REST API: Retrieve submission
+Verifier<--PE REST API: Presentation submission ( VP )
+
+
+Verifier->PE REST API: Update status ( Accepted / Refused )
+Holder<--PE REST API: ( Optional ) Notify submission status
+
+Holder->PE REST API: ( Optional ) Update status ( Holder may refuse to submit )
+
+Verifier->PE REST API: ( Optional ) Check status ( Verifier may may check status )
+Holder->PE REST API: ( Optional ) Check status ( Holder may may check status )
