@@ -3,7 +3,7 @@ Envisioned interoperability
 
 Sphereon's eSSIF Infrastructure project focuses on the interaction between holders and verifiers within an SSI ecosystem. We are working from the standardized [DIF Presentation Exchange specification](https://identity.foundation/presentation-exchange/), and using Verifiable Credentials as per the [W3C Data Model](https://www.w3.org/TR/vc-data-model/).
 
-Given the opensource specifications and standards on which our project relies, as well as the common need for holder-verifier interactions in any SSI architecture, we see an abundance of possible interoperability avenues to pursue with members both inside and outside the eSSIF Labs cohort.
+Given the open-source specifications and standards on which our project relies, as well as the common need for holder-verifier interactions in any SSI architecture, we see an abundance of possible interoperability avenues to pursue with members both inside and outside the eSSIF Labs cohort.
 
 ### Presentation Exchange API Interop
 One fundamental goal in interoperability initiatives is to test the compatibility of independent implementations of the same specification. This lays the groundwork for refinement of specifications and gives a reliable basis for future implementations and adoption of the specification.
@@ -25,9 +25,13 @@ Within eSSIF-Labs, some of the companies that we would target for potential wall
 * LetsTrust
 * Gimly
 
+### CHAPI Compatibility
+
+The Credential Handler API is about handling credential requests and credential storage on behalf of the user. The specification defines a number of new Web platform features to handle credential requests and credential storage. We are currently exploring with eSSIF-Labs' LetsTrust how they can leverage our Presentation Exchange and CHAPI integration. This is however still in an early phase.
+
 ### Beyond eSSIF Labs
 
 One of the eventual goals of our project is to bridge the gap between the W3C-CCG specifications (such as the VC-HTTP-API) and the Hyperledger Aries specifications/implementations. For this purpose, a new work item has been created within the DIF Claims and Credentials working group. This will involve collaboration with representatives in a broad range of SSI spaces (DIF/W3C-CCG/Aries) who seek to define a new test suite and extend/adapt existing specifications and protocols in W3C and Aries to enable compatibility and standardization around verifier/holder interactions.
 
-Sphereon's participation in the group would enable us to broaden the target audience of eSSIF Labs interoperability efforts, and provide a channel for communication and alignment between internal eSSIF Lab members and the broader SSI community.
+Sphereon's participation in the group enables us to broaden the target audience of eSSIF Labs interoperability efforts, and provide a channel for communication and alignment between internal eSSIF Lab members and the broader SSI community.
 
