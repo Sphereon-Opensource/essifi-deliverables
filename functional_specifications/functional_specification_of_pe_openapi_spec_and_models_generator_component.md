@@ -5,7 +5,7 @@ The PE OpenAPI Models Library & Generator will enable developers to use [DIF Pre
 The PE-OpenAPI will enable verifier- and holder-systems to interpret models used by each other in consistent way. Having the model library and generator available will allow for usecases where one wants to implement their own Presentation Exchange, possibly using different programming languages.
 
 
-##Table of contents
+## Table of contents
 
 - [PE-OpenAPI specification](#pe-openapi-specification)
 - [PE-OpenAPI Models Generator](#pe-openapi-models-generator)
