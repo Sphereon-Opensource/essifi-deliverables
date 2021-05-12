@@ -25,3 +25,5 @@ The PE-OpenAPI Models Generator is a pre-configured component to generate the mo
 #### PE-Models library
 
 The pe-models library is a pre-published ready to use `typescript` `node-module` that can be directly downloaded and installed from `npmjs.com`. This can be used in any javascript based project to have a consistent structure of the models required in presentation exchange between verifier and holders of verifiable credentials.
+
+The PE-Models library will also be used in the libraries desiring to validate and verify presentation definitions and submissions.
