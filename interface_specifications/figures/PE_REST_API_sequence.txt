@@ -1,0 +1,44 @@
+# https://sequencediagram.org/
+
+title Presentation Exchange REST API Flow
+
+participant Holder
+participant Verifier
+participant PE REST API
+
+
+Verifier->PE REST API: Create ( Presentation Definition + Challenge Token i.e. PD & CT )
+Verifier<--PE REST API: ( PD & CT URL )
+
+
+Holder<-Verifier: Share ( PD & CT URL )
+
+
+Holder->PE REST API: Get
+Holder<--PE REST API: ( PD & CT )
+Holder-->Holder: Verify ( PD & CT )
+Holder-->Holder: Construct Verifiable Presentation i.e. VP ( PD )
+
+
+Holder->PE REST API: Submit VP ( VP & CT )
+Holder<--PE REST API: ( Status = SUBMITTED )
+Verifier<--PE REST API: [ Optional ] Notify Status ( Status = SUBMITTED )
+
+
+Verifier->PE REST API: Get VP
+Verifier<--PE REST API: ( VP )
+
+
+Verifier->PE REST API: Update Status ( e.g. ACCEPTED )
+Verifier<--PE REST API: ( HTTP 200 OK )
+Holder<--PE REST API: [ Optional ] Notify Status ( e.g. ACCEPTED )
+
+Holder->PE REST API: [ Optional ] Update Status ( e.g. HOLDER_DECLINED )
+Holder<--PE REST API: ( HTTP 200 OK )
+Verifier<--PE REST API: [ Optional ] Notify Status ( Status e.g. HOLDER_DECLINED )
+
+Verifier->PE REST API: [ Optional ] Get Status
+Verifier<--PE REST API: ( Status e.g. SUBMITTED )
+
+Holder->PE REST API: [ Optional ] Get Status
+Holder<--PE REST API: ( Status e.g. ACCEPTED )
