@@ -15,10 +15,10 @@ The goal of the REST API for Presentation Exchange is to:
 * [Presentation Definition POST](#presentation-definition-post)
 * [Presentation Definition Challenge GET](#presentation-definition-challenge-get)
 * [Presentation POST](#presentation-post)
-* [Status Notification to Verifier](#Status-notification-to-verifier)
+* [Status Notification to Verifier](#status-notification-to-verifier)
 * [Verifiable Presentation GET](#verifiable-presentation-get)
 * [Status POST](#status-post)
-* [Status Notification to Holder](#Status-notification-to-holder)
+* [Status Notification to Holder](#status-notification-to-holder)
 * [Status GET](#status-get)
 
 
@@ -114,15 +114,19 @@ Submit a requested presentation
 
 Path Variables:
 * `sessionId`: the session id associated with the interaction
+
+
 Request Body:
-```json
-{
-  "verifiablePresentation": {
-    ...
-  },
-  "callback": "https://holder-example.io/status/1234"
-}
-```
+  ```json
+  {
+    "verifiablePresentation": {
+      ...
+    },
+    "callback": {
+      "url": "https://holder-example.io/status/1234"
+    }
+  }
+  ```
 
 
 #### Response
@@ -131,9 +135,14 @@ Request Body:
     Response body
     ```json
     {
+      "presentationId": "presentationId", 
       "warnings": [...]
     }
     ```
+
+* `202`: Accepted
+    Verifier can respond immediately with `202 accepted`, or it can invoke an HTTP API later asynchronously.
+
 * `400`: Invalid Request
   
     Response Body
@@ -144,9 +153,10 @@ Request Body:
     }
     ```
 
-### Status notification to verifier
 
-`Put <verifier-example.io>/status/{sessionId}`
+### Status Notification to verifier
+
+`Put <verifier-example.io>/exchange/{sessionId}/status`
 
 
 #### Description
@@ -170,17 +180,12 @@ Request Body:
 
 * `200`: Success
 
-
-* `202`: Accepted
-  Verifier can respond immediately with `202 accepted`, or it can invoke an HTTP API later asynchronously.
-
-
 * `404`: Exchange session not found
 
 
 ### Verifiable Presentation GET
 
-`GET /exchange/{sessionId}/presentation`
+`GET GET /exchange/{sessionId}/presentations/{presentationId}`
 
 
 #### Description
@@ -243,7 +248,7 @@ Path Variables:
 
 ### Status notification to holder
 
-`Put <holder-example.io>/status/{sessionId}`
+`Put <holder-example.io>/exchange/{sessionId}/status`
 
 
 #### Description

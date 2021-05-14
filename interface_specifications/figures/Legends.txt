@@ -1,0 +1,9 @@
+# https://sequencediagram.org/
+
+title Legend
+
+participant A
+participant B
+
+A->B: call is initiated (with data) 
+A<--B: spontaneous consequence of above call (responded with data)
