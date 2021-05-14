@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**limit\_disclosure** | [**String**](string.md) |  | [optional] [default to null]
+**limit\_disclosure** | [**String**](string.md) | Whether an item is optional or not in the presentation. E.g. if an item is required presentation can not be accepted without it. | [optional] [default to null]
 **statuses** | [**Statuses**](Statuses.md) |  | [optional] [default to null]
 **fields** | [**List**](Field.md) |  | [optional] [default to null]
 **subject\_is\_issuer** | [**limit_disclosure**](limit_disclosure.md) |  | [optional] [default to null]
