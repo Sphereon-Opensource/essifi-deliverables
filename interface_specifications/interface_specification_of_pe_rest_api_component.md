@@ -140,9 +140,6 @@ Request Body:
     }
     ```
 
-* `202`: Accepted
-    Verifier can respond immediately with `202 accepted`, or it can invoke an HTTP API later asynchronously.
-
 * `400`: Invalid Request
   
     Response Body
@@ -172,6 +169,7 @@ Path Variables:
 Request Body:
 ```json
 {
+  "presentationId": "presentationId",
   "status": "SUBMITTED"
 }
 ```
@@ -183,6 +181,39 @@ Request Body:
 * `404`: Exchange session not found
 
 
+### Verifiable Presentations GET
+
+`GET /exchange/{sessionId}/presentations?offset=0&limit=20`
+
+
+#### Description
+
+Retrieve a presentations with paging.
+
+#### Parameters
+
+Path Variables:
+* `sessionId`: the session id associated with the interaction
+* `offset`: starting-index of the results. This can be overridden by the API side if it is not a practical number.
+* `limit`: the number of results required. This can be overridden by the API side if it is not a practical number.
+
+#### Response
+
+* `200`: Success
+
+  Response Body:
+    ```json
+    [
+      {
+        "verifiablePresentation": {
+          ...
+        },
+        "warnings": [...],
+        "errors": [...]
+      },
+    ...
+  ]
+
 ### Verifiable Presentation GET
 
 `GET /exchange/{sessionId}/presentations/{presentationId}`
@@ -190,13 +221,14 @@ Request Body:
 
 #### Description
 
-Retrieve a presentation submission as a verifier as part of a credential exchange session.
+Retrieve a presentation as a verifier as part of a credential exchange session.
 
 
 #### Parameters
 
 Path Variables:
 * `sessionId`: the session id associated with the interaction
+* `presentationId`: presentationId created when presentation was submitted
   
 
 #### Response
@@ -213,7 +245,7 @@ Path Variables:
       "errors": [...]
     }
     ```
-* `404`: Submission not found
+* `404`: Presentation not found
 
 
 ### Status POST
@@ -233,8 +265,9 @@ Path Variables:
   Request Body:
     ```json
     {
+      "presentationId": "presentationId", 
       "status": "ACCEPTED",
-      "message": "The submission has been accepted without reservation"
+      "message": "The presentation has been accepted without reservation"
     }
     ```
 
@@ -263,7 +296,9 @@ Path Variables:
 Request Body:
 ```json
 {
-  "status": "ACCEPTED"
+  "presentationId": "presentationId",
+  "status": "ACCEPTED",
+  "message": "The presentation has been accepted without reservation"
 }
 ```
 
@@ -298,15 +333,17 @@ Path Variables:
   Response Body
     ```json
     {
-      "status": "SUBMITTED"
+      "presentationId": "presentationId", 
+      "status": "SUBMITTED",
+      "message": "Some warnings were found"
     }
     ```
   * `status` can contain the following values:
       * `CREATED`: create a session http request was successful
-      * `SUBMITTED`: Holder responded with a submission
+      * `SUBMITTED`: Holder responded with a presentation
       * `HOLDER_DECLINED`: (holder_refused)Holder explicitly declined, Holder called some API to update the status.
       * `EXPIRED`: Holder did not respond at all or did not respond in time.
-      * `ACCEPTED`: (completed/verified/valid/approved) Submission was accepted by the verifier.
-      * `VERIFIER_DECLINED`: (verifier_rejected) Submission was rejected by verifier
+      * `ACCEPTED`: (completed/verified/valid/approved) Presentation was accepted by the verifier.
+      * `VERIFIER_DECLINED`: (verifier_rejected) Presentation was rejected by verifier
     
 * `404`: Exchange session not found
