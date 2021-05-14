@@ -1,6 +1,6 @@
 # Using Pre-published PE-Models
 
-Pre-published models can be used in your desired project from various sources. For example 'TypeScript' models can be used from [NPMJS @sphereon/pe-models](https://www.npmjs.com/package/@sphereon/pe-models).
+Pre-published models can be used in your desired project from various sources. For example 'TypeScript' models can be used from [NPMJS @sphereon/pe-models](https://www.npmjs.com/package/@sphereon/pe-models). These are simple typescript model interfaces with fields defined in them. One can import and use them. A more elaborate sequence of steps is described in the [PE-OpenAPI Models Generator](./interface_specification_of_pe_openapi_models_generator_component.md)
 
 
 ### Published Models and languages
