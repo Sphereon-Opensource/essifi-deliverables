@@ -1,6 +1,11 @@
-# Functional Specifications
-Below you can find the links to the attached functional specifications for the components Sphereon is providing as part of the NGI eSSIF Labs Infrastructure project.
+<h1 align="center">
+  <br>
+  <a href="https://www.sphereon.com"><img src="https://sphereon.com/content/themes/sphereon/assets/img/logo.svg" alt="Sphereon" width="400"></a>
+  <br> Functional Specifications
+  <br>
+</h1>
 
+Below you can find the links to the attached functional specifications for the components Sphereon is providing as part of the NGI eSSIF Labs Infrastructure project.
 
 ## Table of Contents
 
