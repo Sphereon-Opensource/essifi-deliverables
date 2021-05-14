@@ -12,3 +12,22 @@ cd pe-openapi
 ```
 
 The `swagger` folder holds the YAMLs these can be processed using swagger-codegen or openapi-codegen plugins to generate the desired code.
+
+
+## Documentation for Models
+
+- [Constraints](./Models/Constraints.md)
+- [Field](./Models/Field.md)
+- [Filter](./Models/Filter.md)
+- [Format](./Models/Format.md)
+- [FormatJwt](./Models/FormatJwt.md)
+- [FormatLdp](./Models/FormatLdp.md)
+- [HolderSubject](./Models/HolderSubject.md)
+- [InputDescriptor](./Models/InputDescriptor.md)
+- [PresentationDefinition](./Models/PresentationDefinition.md)
+- [PresentationDefinitionStatus](./Models/PresentationDefinitionStatus.md)
+- [PresentationSubmission](./Models/PresentationSubmission.md)
+- [Schema](./Models/Schema.md)
+- [Statuses](./Models/Statuses.md)
+- [SubmissionRequirement](./Models/SubmissionRequirement.md)
+- [SubmissionRequirement1](./Models/SubmissionRequirement1.md)
