@@ -8,7 +8,7 @@ The presentation exchange operates generaly as follows; The verifier creates a P
 
 The PE Library will (at least) support the following actions:
 
-	- Validation of the structure of provided presentation definition
+    - Validation of the structure of provided presentation definition
     - Deconstruction of presentation submission from available verifiable credentials
     - Verification of presentation submissions as per defined presentation definition
     - Utilities: to build and use different models compliant with the DIF specs.
