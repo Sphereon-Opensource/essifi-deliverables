@@ -1,5 +1,11 @@
-Envisioned interoperability
-===========================
+
+<h1 align="center">
+  <br>
+  <a href="https://www.sphereon.com"><img src="https://sphereon.com/content/themes/sphereon/assets/img/logo.svg" alt="Sphereon" width="400"></a>
+  <br> Envisioned Interoperability
+  <br>
+</h1>
+
 
 Sphereon's eSSIF-Labs Infrastructure project focuses on the interaction between holders and verifiers within an SSI ecosystem. We are working from the standardized [DIF Presentation Exchange specification](https://identity.foundation/presentation-exchange/), and using Verifiable Credentials as per the [W3C Data Model](https://www.w3.org/TR/vc-data-model/).
 
