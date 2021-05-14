@@ -5,6 +5,8 @@
   <br>
 </h1>
 
+For the Credential Query Infrastructure, three interfaces are specified. First there is the [Presentation Exchange Library](./interface_specification_of_pe_library_component.md), a low level TypeScript (JavaScript) library containing the rules engine component, validations and logic. Further the [PE OpenAPI specification and models generator](./interface_specification_of_pe_openapi_spec_and_models_generator_component.md) is provided to enable developers to generate the models in a programming language of choice. Finially there is the Presentation Exchange REST API {ADD LINK}. which will be exposed using an OpenApi specification and can be used to have all PE functionality available without the need to include the library and models in the project.  
+
 Below you can find the links to the attached interface specifications for the components Sphereon is providing as part of the NGI eSSIF Labs Infrastructure project.
 
 ## Table of Contents
