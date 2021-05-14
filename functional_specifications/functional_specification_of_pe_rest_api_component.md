@@ -9,4 +9,4 @@ The rest API supports the following actions:
     - submit presentation
     - check/update status
 
-For more details on the specific actions that are available, see the [Sphereon's Presentation Exchange REST API Interface specification](./interface_specification/interface_specification_of_pe_rest_api_component.md)
+For more details on the specific actions that are available, see the [Sphereon's Presentation Exchange REST API Interface specification](../interface_specifications/pe_openapi/interface_specification_of_pe_openapi_spec_component.md)
