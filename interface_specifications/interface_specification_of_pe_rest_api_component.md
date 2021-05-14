@@ -102,7 +102,7 @@ Path Variables:
 
 ### Presentation POST
 
-`POST /exchange/{sessionId}/presentation`
+`POST /exchange/{sessionId}/presentations`
 
 
 #### Description
@@ -301,7 +301,7 @@ Path Variables:
       "status": "SUBMITTED"
     }
     ```
-  * following can be values for `status`:
+  * `status` can contain the following values:
       * `CREATED`: create a session http request was successful
       * `SUBMITTED`: Holder responded with a submission
       * `HOLDER_DECLINED`: (holder_refused)Holder explicitly declined, Holder called some API to update the status.
