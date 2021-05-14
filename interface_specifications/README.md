@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-For the Credential Query Infrastructure, three interface specifications are created. First there is the [Presentation Exchange Library](./interface_specification_of_pe_library_component.md), a low level TypeScript (JavaScript) library containing the validations and logic. Further the [PE OpenAPI specification and models generator](./interface_specification_of_pe_openapi_spec_and_models_generator_component.md) is provided to enable developers to generate the models in a programming language of choice. Finally there is the Presentation Exchange REST API {ADD LINK}. which is exposed using an OpenApi specification and can be used to have all PE functionality available without the need to include the library and models in the project.  
+For the Credential Query Infrastructure, three interface specifications are created. First there is the [Presentation Exchange Library](./functional_specification_of_pe_library_component.md), a low level TypeScript (JavaScript) library containing the validations and logic. Further the [PE OpenAPI specification and models generator](./functional_specification_of_pe_openapi_spec_and_models_generator_component.md) is provided to enable developers to generate the models in a programming language of choice. Finally there is the [Presentation Exchange REST API](./functional_specification_of_pe_rest_api_component.md). which is exposed using an OpenApi specification and can be used to have all PE functionality available without the need to include the library and models in the project.  
 
 Below you can find the links to the attached interface specifications for the components Sphereon is providing as part of the NGI eSSIF Lab Infrastructure project.
 
@@ -13,4 +13,4 @@ Below you can find the links to the attached interface specifications for the co
 
 * [PE OpenAPI specification and models generator](./interface_specification_of_pe_openapi_spec_and_models_generator_component.md)
 * [Presentation Exchange Library](./interface_specification_of_pe_library_component.md)
-* Presentation Exchange REST API
+* [Presentation Exchange REST API]
