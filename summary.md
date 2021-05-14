@@ -20,9 +20,9 @@ For more information on the project please contact: **Joris Nijman: [jnijman@sph
 - [Project Overview](#project-overview)
 
 ## About Sphereon
-We build technology and products in co-creation with governments, enterprises, software developers and integrators and help you to add a trust-layer to your systems. We focus on Digital Identities and Verifiable Credentials solutions, helping people and businesses to take control of their private data in business, government, healthcare and education applications.
+We build technology and products in co-creation with governments, enterprises, software developers and integrators and help organizations to add a trust-layer to their systems. We focus on Digital Identities and Verifiable Credentials solutions, helping people and businesses to take control of their private data in business, government, healthcare and education domains.
 
-It is our mission to end the digital trust problem that leads to distrust, digital fraud and other digital mishaps. For this we build applications that solve today’s trust challenges. We're Creating Trust in a Digital World.
+It is our mission to end the digital trust problem that leads to societal distrust, digital fraud and other digital mishaps. We're Creating Trust in a Digital World.
 
 ## Project Overview
 Sphereon, as part of its Vindicatio project, is creating a new DIF Presentation Exchange (PE) for DIF/W3C SSI solutions. The PE will be compatible with Aries Present Proof Protocol v2, and uses a layered approach to achieve both integration and interoperability.
