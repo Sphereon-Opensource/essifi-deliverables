@@ -188,7 +188,7 @@ Request Body:
 
 #### Description
 
-Retrieve a presentations with paging.
+Retrieve all presentations for this exchange session with pagination.
 
 #### Parameters
 
