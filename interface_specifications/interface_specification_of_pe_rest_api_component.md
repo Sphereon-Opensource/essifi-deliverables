@@ -12,24 +12,24 @@ The goal of the REST API for Presentation Exchange is to:
 
 ## API
 
-* [Initiation](#Initiation)
-* [Challenge / Presentation Definition retrieval](#challenge-/-Presentation-Definition-retrieval)
-* [Presentation Submission](#Presentation-Submission)
-* [Status notification to verifier](#Status-notification-to-verifier)
-* [Retrieve Presentation Submission](#Retrieve-Presentation-Submission)
-* [Status update](#Status-update)
-* [Status notification to holder](#Status-notification-to-holder)
-* [Status check](#Status-check)
+* [Presentation Definition POST](#presentation-definition-post)
+* [Presentation Definition Challenge GET](#presentation-definition-challenge-get)
+* [Presentation POST](#presentation-post)
+* [Status Notification to Verifier](#Status-notification-to-verifier)
+* [Verifiable Presentation GET](#verifiable-presentation-get)
+* [Status POST](#status-post)
+* [Status Notification to Holder](#Status-notification-to-holder)
+* [Status GET](#status-get)
 
 
-### Initiation
+### Presentation Definition POST
 
 `POST /exchange`
 
 
 #### Description
 
-Initiate a new Verifier/Holder interaction
+Initiate a new Verifier/Holder interaction by creating a Presentation Definition.
 
 
 #### Parameters
@@ -38,9 +38,13 @@ Request Body:
 ```json
 {
   "presentation_definition": {...},
-  "challenge": "1e84250c-25a7-444c-a42b-0a8c43d900e6",
-  "holder": "did:example:12345",
-  "callback": "https://verifier-example.io/status/12345"
+  "challenge": {
+    "holder": "did:example:12345",
+    "token": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
+  },
+  "callback": {
+    "url":"https://verifier-example.io/status/12345"
+  }
 }
 ```
 
@@ -53,7 +57,7 @@ Request Body:
     
     ```json
     {
-      "challengeTokenUrl": "https://pe-rest-api-example.io/exchange/1234"
+      "sessionUrl": "https://pe-rest-api-example.io/exchange/1234"
     }
     ```
 * `400`: Invalid request
@@ -67,7 +71,7 @@ Request Body:
   ```
 
 
-### Challenge / Presentation Definition retrieval
+### Presentation Definition Challenge GET
 
 `GET /exchange/{sessionId}`
 
@@ -86,17 +90,19 @@ Path Variables:
     Response Body
     ```json
     {
-      "presentation_definition": {...},
-      "callback": "https://pe-rest-api-example.io/exchange/1234/submission",
-      "challenge": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
+        "presentation_definition": {...},
+        "challenge": {
+          "holder": "did:example:12345",
+          "token": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
+        }
     }
     ```
 * `404`: Session not found
 
 
-### Presentation Submission
+### Presentation POST
 
-`POST /exchange/{sessionId}/submission`
+`POST /exchange/{sessionId}/presentation`
 
 
 #### Description
@@ -172,9 +178,9 @@ Request Body:
 * `404`: Exchange session not found
 
 
-### Retrieve Presentation Submission
+### Verifiable Presentation GET
 
-`GET /exchange/{sessionId}/submission`
+`GET /exchange/{sessionId}/presentation`
 
 
 #### Description
@@ -205,7 +211,7 @@ Path Variables:
 * `404`: Submission not found
 
 
-### Status update
+### Status POST
 
 `Post /exchange/{sessionId}/status`
 
@@ -264,7 +270,7 @@ Request Body:
 * `404`: Exchange session not found
 
 
-### Status check
+### Status GET
 
 `GET /exchange/{sessionId}/status`
 
