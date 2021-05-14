@@ -185,7 +185,7 @@ Request Body:
 
 ### Verifiable Presentation GET
 
-`GET GET /exchange/{sessionId}/presentations/{presentationId}`
+`GET /exchange/{sessionId}/presentations/{presentationId}`
 
 
 #### Description
