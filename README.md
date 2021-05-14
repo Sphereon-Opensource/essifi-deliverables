@@ -6,6 +6,7 @@
 </h1>
 
 This repo contains all formal deliverables provided by Sphereon as part of the NGI eSSIF Labs Infrastructure project.
+For an explanation about this project we defer to the [summary](.summary.md)
 
 ## Table of Contents
 * [Envisioned Interoperability w/ Others](./interoperability/envisioned_interoperability_with_others.md)
