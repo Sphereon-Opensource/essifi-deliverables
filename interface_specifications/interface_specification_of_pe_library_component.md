@@ -1,6 +1,6 @@
 # Interface Specification for Presentation Exchange Library
 
-The Presentation Exchange Library is meant to be a general use library that implements the functionality described in
+The Presentation Exchange Library is a general use library that implements the functionality described in
 the [DIF Presentation Exchange](https://identity.foundation/presentation-exchange/) specification. It is written in
 Typescript and can be compiled to any target Javascript version. It has been built to be compatible with browsers,
 mobile and NodeJS environments.
@@ -104,7 +104,7 @@ const presentation = {
 ```
 
 #### Utilities
-In addition to the core functionality above, we also expose the underlying validation methods as low-level helper functions.
+In addition to the core functionality above, the underlying validation methods are exposed as low-level helper functions.
 ```typescript
 import pejs from 'pe-js';
 
@@ -191,7 +191,7 @@ Creates the corresponding Presentation Submission object to be included in the V
 | `selectedCredentials` | `VerifiableCredential[]` | the array of verifiable credentials that meet the submission requirements in the presentation definition |
 
 #### Return value
-If selected credentials successfully match the submission requirements in the presentation definition, the return value will be a non-null `PresentationSubmission`
+If the selected credentials successfully match the submission requirements in the presentation definition, the return value will be a non-null `PresentationSubmission`
 ```typescript
 interface PresentationSubmission {
   id?: string;
