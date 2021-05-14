@@ -5,8 +5,14 @@ Sphereon's PE REST API is an implementation agnostic, stateful, and platform ind
 Systems that need a stateful, reliable and compliant DIF Presentation Exchange can use PE REST API with a simple 'create session' call. This will enable the caller to have a presentation definition that can be shared. On each progressive interaction with the PE REST API, the backend will be updated, keeping track of the status of the overall exchange. The involved parties can be notified of the status changes using the provided endpoint. The parties can also enquire the status by calling the 'status check' API endpoint, eliminating the need to develop and deploy a callback listening endpoint. The fact that the PE REST API is agnostic to the callers' implementation, allows the verifier and holders to be interchangeable and have different systems.
 
 The rest API supports the following actions:
-    - create presentation definition
-    - submit presentation
-    - check/update status
+- Create [Presentation Definitions](https://identity.foundation/presentation-exchange/#term:presentation-definitions)
+    - Define [Input Descriptors](https://identity.foundation/presentation-exchange/#input-descriptor)
+    - Define [Submission Requirements](https://identity.foundation/presentation-exchange/#submission-requirements)
+    - Do [Input Evaluation](https://identity.foundation/presentation-exchange/#input-evaluation)
+- Create [Presentation Requests](https://identity.foundation/presentation-exchange/#presentation-submission)
+- Create [Presentation Submission](https://identity.foundation/presentation-exchange/#presentation-submission)
+- Check status of the presentation exchange
+
+
 
 For more details on the specific actions that are available, see the [Sphereon's Presentation Exchange REST API Interface specification](./interface_specification/interface_specification_of_pe_rest_api_component.md)
