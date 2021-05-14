@@ -191,7 +191,7 @@ Creates the corresponding Presentation Submission object to be included in the V
 | `selectedCredentials` | `VerifiableCredential[]` | the array of verifiable credentials that meet the submission requirements in the presentation definition |
 
 #### Return value
-If selected, credentials successfully match the submission requirements in the presentation definition, the return value will be a non-null `PresentationSubmission`
+If the selected credentials successfully match the submission requirements in the presentation definition, the return value will be a non-null `PresentationSubmission`
 ```typescript
 interface PresentationSubmission {
   id?: string;
