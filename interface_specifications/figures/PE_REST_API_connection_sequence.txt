@@ -1,0 +1,16 @@
+# https://sequencediagram.org/
+
+title Presentation Exchange Connection Flow
+
+participant Participant A
+participant PE REST API
+participant Participant B
+
+
+Participant A->PE REST API: Connect ( to_B, DID-A )
+Participant B<--PE REST API: Connect with ( DID-A )
+Participant B-->PE REST API: ( DID-B )
+Participant A<--PE REST API: ( Accepted )
+
+
+note over Participant A,Participant B: Alternatively the flow can be initiated by 'B' intending to connect with 'A'

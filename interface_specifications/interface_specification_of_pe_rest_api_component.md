@@ -5,6 +5,21 @@ The goal of the REST API for Presentation Exchange is to:
 * Expose the functionality of the [PE Library](./interface_specification_of_pe_library_component.md) for use in any language
 * Provide stateful interaction mediation between holders and verifiers
 
+
+## Legends
+
+<br/>
+
+![image info](./figures/Legends.svg)
+
+
+## PE REST API Connection Flow
+<br/>
+
+![image info](./figures/PE_REST_API_connection_sequence.svg)
+
+## PE REST API Presentation Exchange
+
 <br/>
 
 ![image info](./figures/PE_REST_API_sequence.svg)
