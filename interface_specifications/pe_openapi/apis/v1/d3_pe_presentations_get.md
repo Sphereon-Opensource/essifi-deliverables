@@ -1,5 +1,4 @@
-
-### Verifiable Presentations GET
+### Presentations GET
 
 `GET /pe/v1/{thid}/presentations?offset=0&limit=20`
 

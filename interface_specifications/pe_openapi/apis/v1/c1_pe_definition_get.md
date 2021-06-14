@@ -1,4 +1,4 @@
-### Presentation Definition Challenge GET
+### Presentation Definition GET
 
 `GET /pe/v1/{thid}/definition/{definition_id}`
 

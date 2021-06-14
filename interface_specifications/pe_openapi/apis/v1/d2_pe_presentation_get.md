@@ -1,4 +1,4 @@
-### Verifiable Presentation GET
+### Presentation GET
 
 `GET /pe/v1/{thid}/presentation/{presentation_id}`
 

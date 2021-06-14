@@ -1,5 +1,5 @@
 
-### Status GET
+### Presentation Status GET
 
 `GET /pe/v1/{thid}/presentation/{presentation_id}/status`
 

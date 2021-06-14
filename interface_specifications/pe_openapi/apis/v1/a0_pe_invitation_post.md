@@ -25,6 +25,7 @@ REST API acts as mediator and forwards the message to the receiver and responds 
           "json": {
             "invitee": "e.g. holder 'B'",
             "from": "DID-A"
+          }
         }
       }
     ]

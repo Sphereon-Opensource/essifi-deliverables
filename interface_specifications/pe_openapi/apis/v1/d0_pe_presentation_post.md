@@ -1,6 +1,6 @@
 ### Presentation POST
 
-`POST /pe/v1/{thid}/definition/{definition_id}/presentation/`
+`POST /pe/v1/{thid}/presentation/`
 
 
 #### Description

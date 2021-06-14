@@ -61,7 +61,7 @@ Add/save a Presentation Definition on the server.
 
     ```json
     {
-      "thread_url": "https://pe-rest-api-example.io/pe/v1/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/definition/32f54163-7166-48f1-93d8-ff217bdb0653/"
+      "definition_url": "https://pe-rest-api-example.io/pe/v1/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/definition/32f54163-7166-48f1-93d8-ff217bdb0653/"
     }
     ```
 

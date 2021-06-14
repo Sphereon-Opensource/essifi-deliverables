@@ -5,7 +5,7 @@
 
 #### Description
 
-Once party (e.g. Holder) receives the invitation. The party can send the connection information (i.e. DID).
+Once party (e.g. Holder) [receives invitation](./a1_pe_invitation_get.md). The party can send the connection information (i.e. DID).
 
 
 #### Request Body:
@@ -24,6 +24,7 @@ Once party (e.g. Holder) receives the invitation. The party can send the connect
           "json": {
             "invitee": "DID-B",
             "for": "DID-A"
+          }
         }
       }
     ]
