@@ -8,12 +8,15 @@ participant Verifier
 
 note over Holder,Verifier: Pre-Requisite ( The connection has been established )
 
-PE REST API<-Verifier: Create ( Presentation Definition + Challenge Token i.e. PD & CT )
-PE REST API-->Verifier: ( PD & CT URL )
+PE REST API<-Verifier: Start Thread
+PE REST API-->Verifier: ( thid )
 
-Holder<-Verifier: Share ( PD & CT URL )
+PE REST API<-Verifier: Add Definition ( Presentation Definition + Challenge Token i.e. PD & CT )
+PE REST API-->Verifier: ( URL & thid )
 
-Holder->PE REST API: Get
+Holder<-Verifier: Share ( URL & thid )
+
+Holder->PE REST API: Get Definition ( URL & thid )
 Holder<--PE REST API: ( PD & CT )
 Holder-->Holder: Verify ( PD & CT )
 Holder-->Holder: Construct Verifiable Presentation i.e. VP ( PD )

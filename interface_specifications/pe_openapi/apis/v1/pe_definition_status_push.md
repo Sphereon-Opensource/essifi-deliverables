@@ -1,6 +1,6 @@
-### Status Notification to Verifier
+### Status Notification to Holder
 
-`PUT <verifier-example.io>pe/{thid}/presentation/{presentation_id}/status`
+`PUT <verifier-example.io>pe/{thid}/definition/{definition_id}/status`
 
 
 #### Description
@@ -11,14 +11,20 @@ This is an optional interaction and hence party can choose not to implement it. 
 
 Path Variables:
 * `thid`: Thread ID e.g. `f1ca8245-ab2d-4d9c-8d7d-94bf310314ef`
-* `presentation_id`: presentation id e.g. `a30e3b91-fb77-4d22-95fa-871689c322e2`
+* `definition_id`: definition id e.g. `32f54163-7166-48f1-93d8-ff217bdb0653`
 
-Request Body:
+Request Body ( Example : notification to Verifier ):
+
 ```json
 {
   "thid": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef",
-  "presentation_id": "a30e3b91-fb77-4d22-95fa-871689c322e2",
-  "status": "SUBMITTED"
+  "definition_id": "32f54163-7166-48f1-93d8-ff217bdb0653",
+  "statuses": [
+    {
+      "presentation_id": "a30e3b91-fb77-4d22-95fa-871689c322e2",
+      "status": "SUBMITTED"
+    }
+  ]
 }
 ```
 

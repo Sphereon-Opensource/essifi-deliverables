@@ -26,12 +26,13 @@ The goal of the REST API for Presentation Exchange is to:
 
 
 ## API
-
+* [Connection Invitation POST](pe_openapi/apis/v1/pe_invitation_post.md)
+* [Connection Invitation GET](pe_openapi/apis/v1/pe_invitation_get.md)
 * [Presentation Definition POST](./pe_openapi/apis/v1/pe_definition_post.md)
 * [Presentation Definition Challenge GET](./pe_openapi/apis/v1/pe_definition_get.md)
 * [Presentation POST](./pe_openapi/apis/v1/pe_presentation_post.md)
 * [Status Notification to Party](./pe_openapi/apis/v1/pe_presentation_status_push.md)
-* [Verifiable Presentation GET](./pe_openapi/apis/v1/pe_definition_get.md)
-* [Status POST](./pe_openapi/apis/v1/pe_status_post.md)
+* [Verifiable Presentation GET](./pe_openapi/apis/v1/pe_presentation_get.md)
+* [Status POST](pe_openapi/apis/v1/pe_presentation_status_post.md)
 * [Status GET](./pe_openapi/apis/v1/pe_definition_get.md)
 
