@@ -8,8 +8,8 @@ participant Participant B
 
 
 Participant A->PE REST API: Connect ( to_B, DID-A )
-Participant B<--PE REST API: Connect with ( DID-A )
-Participant B-->PE REST API: ( DID-B )
+PE REST API-->Participant B: Connect with ( DID-A )
+PE REST API<-Participant B: ( DID-B )
 Participant A<--PE REST API: ( Accepted )
 
 
