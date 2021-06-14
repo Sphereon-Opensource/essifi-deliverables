@@ -1,4 +1,4 @@
-### Status Notification to Holder
+### Status Notification to Verifier
 
 `PUT <verifier-example.io>pe/{thid}/definition/{definition_id}/status`
 

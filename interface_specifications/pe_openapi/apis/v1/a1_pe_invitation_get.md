@@ -5,7 +5,7 @@
 
 #### Description
 
-Once a party(e.g. Verifier) has [posted a request](./pe_invitation_post.md) the receiver(e.g. Holder) can GET the invitation.
+Once a party(e.g. Verifier) has [posted a request](a0_pe_invitation_post.md) the receiver(e.g. Holder) can GET the invitation.
 
 
 #### Parameters

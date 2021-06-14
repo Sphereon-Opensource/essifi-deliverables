@@ -1,6 +1,6 @@
-### Status Notification to Verifier
+### Status Notification to Holder
 
-`PUT <verifier-example.io>pe/{thid}/presentation/{presentation_id}/status`
+`PUT <holder-example.io>pe/{thid}/presentation/{presentation_id}/status`
 
 
 #### Description
@@ -18,7 +18,7 @@ Request Body:
 {
   "thid": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef",
   "presentation_id": "a30e3b91-fb77-4d22-95fa-871689c322e2",
-  "status": "SUBMITTED"
+  "status": "ACCEPTED"
 }
 ```
 
