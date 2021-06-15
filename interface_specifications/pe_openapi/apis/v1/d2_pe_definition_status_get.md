@@ -1,11 +1,12 @@
-### Status Notification to Verifier
+### Presentation Definition Status GET
 
-`PUT <verifier-example.io>pe/{thid}/definition/{definition_id}/status`
+`GET /pe/v1/{thid}/definition/{definition_id}/status`
 
 
 #### Description
 
-This is an optional interaction and hence party can choose not to implement it. The PE REST Backend invokes an HTTP REST API exposed by the party to notify about the status of exchange.
+This is an optional interaction and hence party can choose not to implement it.
+
 
 #### Parameters
 
