@@ -40,5 +40,8 @@ PE REST API-->Verifier: [ Optional ] Notify Status ( Status e.g. HOLDER_DECLINED
 PE REST API<-Verifier: [ Optional ] Get Status
 PE REST API-->Verifier: ( Status e.g. SUBMITTED )
 
+PE REST API<-Verifier: [ Optional ] Get Definition Statuses
+PE REST API-->Verifier: ( Status e.g. list of [SUBMITTED, ACCEPTED] etc. )
+
 Holder->PE REST API: [ Optional ] Get Status
 Holder<--PE REST API: ( Status e.g. ACCEPTED )
