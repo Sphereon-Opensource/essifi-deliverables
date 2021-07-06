@@ -22,9 +22,9 @@ Holder-->Holder: Verify ( PD & CT )
 Holder-->Holder: Construct Verifiable Presentation i.e. VP ( PD )
 
 Holder->PE REST API: Submit VP ( VP & CT )
-Holder<--PE REST API: ( Status = SUBMITTED )
+PE REST API-->PE REST API: Evaluate input (Presentation i.e. P)
+Holder<--PE REST API: ( Status = e.g. SUBMITTED )
 PE REST API-->Verifier: [ Optional ] Notify Status ( Status = SUBMITTED )
-
 PE REST API<-Verifier: Get VP
 PE REST API-->Verifier: ( VP )
 Verifier-->Verifier: Verify ( VP )

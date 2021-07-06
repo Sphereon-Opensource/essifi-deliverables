@@ -28,12 +28,6 @@ Path Variables:
       "message": "Some warnings were found"
     }
     ```
-    * `status` can contain the following values:
-        * `CREATED`: create a session http request was successful
-        * `SUBMITTED`: Holder responded with a presentation
-        * `HOLDER_DECLINED`: (holder_refused)Holder explicitly declined, Holder called some API to update the status.
-        * `EXPIRED`: Holder did not respond at all or did not respond in time.
-        * `ACCEPTED`: (completed/verified/valid/approved) Presentation was accepted by the verifier.
-        * `VERIFIER_DECLINED`: (verifier_rejected) Presentation was rejected by verifier
+    * `status` [Possible Status](../statuses.md)
 
 * `404`: Exchange session not found

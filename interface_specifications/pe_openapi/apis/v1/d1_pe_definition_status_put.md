@@ -33,3 +33,5 @@ Request Body
 * `200`: Success
 
 * `404`: Exchange session not found
+
+#### See also : [Possible Status](../statuses.md)
