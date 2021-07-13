@@ -5,7 +5,7 @@
 
 #### Description
 
-Once party (e.g. Holder) [receives invitations](./a1_pe_invitations_get.md). The party can send the connection information (i.e. DID).
+Once party (e.g. Holder) receives [invitations](./a1_pe_invitations_get.md). The party can send the connection information (i.e. DID).
 
 
 #### Request Body:

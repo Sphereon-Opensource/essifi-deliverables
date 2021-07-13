@@ -5,10 +5,11 @@
 
 #### Description
 
-Any party (i.e. Verifier or Holder) can request to connect to other party. This connection invitation is sent as an out-of-band message since the DID of others may not be known at this stage.
+A party (usually Verifier) can provide information (to holders) to connect (to verifier) on a web page. The recipient (e.g. holder) will visit the web page and scan a QR Code. This connection invitation can be seen as an out-of-band message.
 
-REST API acts as mediator and forwards the message to the receiver and responds back with the DID of the receiver in a DIDComm message.
+The receiver (e.g. holder) responds back with its connection detail.
 
+This call creates that invitation to show on the web page.
 
 #### Request Body:
   ```json  
@@ -23,7 +24,6 @@ REST API acts as mediator and forwards the message to the receiver and responds 
         "mime-type": "application/json",
         "data": {
           "json": {
-            "invitee": "e.g. holder 'B'",
             "from": "DID-A"
           }
         }
@@ -34,20 +34,20 @@ REST API acts as mediator and forwards the message to the receiver and responds 
 
 #### Response
 
-  * `200`: Success
+* `200`: Success
     
-    Send the didcomm message to the initiating party.
+Send the DIDComm message to the recipient visiting our web page.
 
-    ```json
-    {
-        "url": "example.com/pe/v1/invitations/5f0e3ffb-3f92-4648-9868-0d6f8889e6f3"
-    }
-    ```
+```json
+  {
+    "url": "example.com/pe/v1/invitations/5f0e3ffb-3f92-4648-9868-0d6f8889e6f3"
+  }
+```
 
 * `404`: Not found
 
 
-The response will be forwarded to the receiver (e.g. Holder) by party (e.g. Verifier) with additional context.
+The response can be forwarded to the receiver (e.g. Holder) by party (e.g. Verifier) with additional context as well.
 
     Dear Holder,
     
