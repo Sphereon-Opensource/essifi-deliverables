@@ -1,6 +1,6 @@
 ### Presentations GET
 
-`GET /pe/v1/{thid}/presentations?offset=0&limit=20`
+`GET /pe/v1/presentations?offset=0&limit=20`
 
 
 #### Description
@@ -10,7 +10,6 @@ Retrieve all presentations for this exchange session with pagination.
 #### Parameters
 
 Path Variables:
-* `thid`: Thread ID associated with the presentation exchange. e.g. `f1ca8245-ab2d-4d9c-8d7d-94bf310314ef`
 * `offset`: starting-index of the results. This can be overridden by the API side if it is not a practical number.
 * `limit`: the number of results required. This can be overridden by the API side if it is not a practical number.
 
@@ -21,6 +20,9 @@ Path Variables:
   Response Body:
 ```json
   {
+    "thread": {
+      "id": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef"
+    },
     "presentations": [
       {
         "presentation_submission": {
@@ -48,7 +50,7 @@ Path Variables:
           "token": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
         },
         "callback": {
-          "url": "https://holder-example.io/pe/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/presentation/a30e3b91-fb77-4d22-95fa-871689c322e2"
+          "url": "https://holder-example.io/pe/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/presentations/a30e3b91-fb77-4d22-95fa-871689c322e2"
         }
       }
     ]

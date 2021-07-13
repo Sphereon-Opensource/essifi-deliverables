@@ -1,11 +1,11 @@
-### Invitation GET
+### invitations GET
 
-`GET /pe/v1/invitation?_oobid=5f0e3ffb-3f92-4648-9868-0d6f8889e6f3`
+`GET /pe/v1/invitations/5f0e3ffb-3f92-4648-9868-0d6f8889e6f3`
 
 
 #### Description
 
-Once a party(e.g. Verifier) has [posted a request](a0_pe_invitation_post.md) the receiver(e.g. Holder) can GET the invitation.
+Once a party(e.g. Verifier) has [posted a request](a0_pe_invitations_post.md) the receiver(e.g. Holder) can GET the invitations.
 
 
 #### Parameters

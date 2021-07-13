@@ -1,6 +1,6 @@
 ### Presentation POST
 
-`POST /pe/v1/{thid}/presentation/`
+`POST /pe/v1/presentations/`
 
 
 #### Description
@@ -11,13 +11,15 @@ Submit a requested presentation
 #### Parameters
 
 Path Variables:
-* `thid`: id of the presentation exchange thread e.g. `f1ca8245-ab2d-4d9c-8d7d-94bf310314ef`
 * `definition_id`: definition id for which this presentation is being submitted. e.g. `32f54163-7166-48f1-93d8-ff217bdb0653`
 
 
 Request Body:
 ```json
   {
+    "thread": {
+      "id": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef"
+    },
     "presentation_submission": {
       "id": "a30e3b91-fb77-4d22-95fa-871689c322e2",
       "definition_id": "32f54163-7166-48f1-93d8-ff217bdb0653",
@@ -43,7 +45,7 @@ Request Body:
       "token": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
     },
     "callback": {
-      "url": "https://holder-example.io/pe/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/presentation/a30e3b91-fb77-4d22-95fa-871689c322e2/status"
+      "url": "https://holder-example.io/pe/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/presentations/a30e3b91-fb77-4d22-95fa-871689c322e2/statuses"
     }
   }
 ```
@@ -55,7 +57,9 @@ Request Body:
   Response body
     ```json
     {
-      "thid": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef",
+      "thread":{
+        "id": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef"
+      },
       "presentationId": "a30e3b91-fb77-4d22-95fa-871689c322e2", 
       "warnings": [
   

@@ -1,6 +1,6 @@
 ### Status Notification to Holder
 
-`PUT <holder-example.io>pe/{thid}/presentation/{presentation_id}/status`
+`PUT <holder-example.io>pe/presentations/{presentation_id}/statuses`
 
 
 #### Description
@@ -10,13 +10,14 @@ This is an optional interaction and hence party can choose not to implement it. 
 #### Parameters
 
 Path Variables:
-* `thid`: Thread ID e.g. `f1ca8245-ab2d-4d9c-8d7d-94bf310314ef`
 * `presentation_id`: presentation id e.g. `a30e3b91-fb77-4d22-95fa-871689c322e2`
 
 Request Body:
 ```json
 {
-  "thid": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef",
+  "thread":{
+    "id": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef"
+  },
   "presentation_id": "a30e3b91-fb77-4d22-95fa-871689c322e2",
   "status": "ACCEPTED"
 }

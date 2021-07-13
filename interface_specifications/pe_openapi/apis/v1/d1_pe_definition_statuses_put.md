@@ -1,6 +1,6 @@
 ### Status Notification to Verifier
 
-`PUT <verifier-example.io>pe/{thid}/definition/{definition_id}/status`
+`PUT <verifier-example.io>pe/definitions/{definition_id}/statuses`
 
 
 #### Description
@@ -10,14 +10,15 @@ This is an optional interaction and hence party can choose not to implement it. 
 #### Parameters
 
 Path Variables:
-* `thid`: Thread ID e.g. `f1ca8245-ab2d-4d9c-8d7d-94bf310314ef`
 * `definition_id`: definition id e.g. `32f54163-7166-48f1-93d8-ff217bdb0653`
 
 Request Body
 
 ```json
 {
-  "thid": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef",
+  "thread":{
+    "id": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef"
+  },
   "definition_id": "32f54163-7166-48f1-93d8-ff217bdb0653",
   "statuses": [
     {

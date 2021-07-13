@@ -1,17 +1,17 @@
 ### Connection POST
 
-`POST /pe/v1/connection/`
+`POST /pe/v1/connections/`
 
 
 #### Description
 
-Once party (e.g. Holder) [receives invitation](./a1_pe_invitation_get.md). The party can send the connection information (i.e. DID).
+Once party (e.g. Holder) [receives invitations](./a1_pe_invitations_get.md). The party can send the connection information (i.e. DID).
 
 
 #### Request Body:
   ```json  
   {
-    "@type": "https://didcomm.org/out-of-band/v1/invitation",
+    "@type": "https://didcomm.org/out-of-band/v1/invitations",
     "@id": "1cd8c62b-d07f-4f35-a92a-8e1453e6fa89",
     "goal_code": "connect",
     "goal": "To connect and issue the did for communication",
