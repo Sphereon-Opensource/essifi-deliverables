@@ -15,10 +15,6 @@ Path Variables:
   Request Body:
   ```json
   {
-    "thread":{
-      "id": "f1ca8245-ab2d-4d9c-8d7d-94bf310314ef"
-    },
-    "presentation_id": "a30e3b91-fb77-4d22-95fa-871689c322e2", 
     "status": "ACCEPTED",
     "message": "The presentation has been accepted without reservation"
   }
