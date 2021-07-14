@@ -29,7 +29,7 @@ Path Variables:
       "token": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
     },
     "callback": {
-      "url":"https://verifier-example.io/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/statuses"
+      "url":"https://verifier-example.io/definitions/32f54163-7166-48f1-93d8-ff217bdb0653/statuses"
     }
   }
 ```

@@ -45,7 +45,7 @@ Request Body:
       "token": "1e84250c-25a7-444c-a42b-0a8c43d900e6"
     },
     "callback": {
-      "url": "https://holder-example.io/pe/f1ca8245-ab2d-4d9c-8d7d-94bf310314ef/presentations/a30e3b91-fb77-4d22-95fa-871689c322e2/statuses"
+      "url": "https://holder-example.io/pe/presentations/a30e3b91-fb77-4d22-95fa-871689c322e2/statuses"
     }
   }
 ```
