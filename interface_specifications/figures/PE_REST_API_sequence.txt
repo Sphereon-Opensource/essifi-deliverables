@@ -18,16 +18,17 @@ Holder-->PE REST API: Get ( URL & thread_id )
 
 Holder->PE REST API: Get Definition ( URL & thread_id )
 Holder<--PE REST API: ( PD & CT )
-Holder-->Holder: Verify ( PD & CT )
+Holder-->Holder: Validate ( PD & CT )
 Holder-->Holder: Construct Verifiable Presentation i.e. VP ( PD )
 
 Holder->PE REST API: Submit VP ( VP & CT )
-PE REST API-->PE REST API: Evaluate input (Presentation i.e. P)
+PE REST API-->PE REST API: Validate ( VP )
 Holder<--PE REST API: ( Status = e.g. SUBMITTED )
 PE REST API-->Verifier: [ Optional ] Notify Status ( Status = SUBMITTED )
+
 PE REST API<-Verifier: Get VP
 PE REST API-->Verifier: ( VP )
-Verifier-->Verifier: Verify ( VP )
+Verifier-->Verifier: Evaluate Input (PD, Presentation i.e. 'P')
 
 PE REST API<-Verifier: Update Status ( e.g. ACCEPTED )
 PE REST API-->Verifier: ( HTTP 200 OK )
