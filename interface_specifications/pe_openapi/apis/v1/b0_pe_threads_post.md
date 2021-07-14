@@ -1,6 +1,6 @@
 ### Thread POST
 
-`POST /pe/v1/`
+`POST /pe/v1/threads/`
 
 
 #### Description

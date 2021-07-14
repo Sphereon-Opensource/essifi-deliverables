@@ -13,7 +13,7 @@ This is an optional interaction and hence party can choose not to implement it.
 Path Variables:
 * `definition_id`: definition id e.g. `32f54163-7166-48f1-93d8-ff217bdb0653`
 
-Request Body
+#### Response Body
 
 ```json
 {
@@ -29,11 +29,5 @@ Request Body
   ]
 }
 ```
-
-#### Response
-
-* `200`: Success
-
-* `404`: Exchange session not found
 
 #### See also : [Possible Status](../statuses.md)
