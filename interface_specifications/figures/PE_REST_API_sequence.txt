@@ -1,44 +1,46 @@
 # https://sequencediagram.org/
 
-title Presentation Exchange REST API Flow
+title REST API Presentation Exchange
 
 participant Holder
-participant Verifier
 participant PE REST API
+participant Verifier
 
+note over Holder,Verifier: Pre-Requisite ( The connection has been established )
 
-Verifier->PE REST API: Create ( Presentation Definition + Challenge Token i.e. PD & CT )
-Verifier<--PE REST API: ( PD & CT URL )
+PE REST API<-Verifier: Start Thread
+PE REST API-->Verifier: ( thread_id )
 
+PE REST API<-Verifier: Add Definition ( Presentation Definition + Challenge Token i.e. PD & CT )
+PE REST API-->Verifier: ( URL & thread_id )
 
-Holder<-Verifier: Share ( PD & CT URL )
-
-
-Holder->PE REST API: Get
+Holder->PE REST API: Get Definition ( URL & thread_id )
 Holder<--PE REST API: ( PD & CT )
-Holder-->Holder: Verify ( PD & CT )
+Holder-->Holder: Validate ( PD & CT )
 Holder-->Holder: Construct Verifiable Presentation i.e. VP ( PD )
 
-
 Holder->PE REST API: Submit VP ( VP & CT )
-Holder<--PE REST API: ( Status = SUBMITTED )
-Verifier<--PE REST API: [ Optional ] Notify Status ( Status = SUBMITTED )
+PE REST API-->PE REST API: Validate ( VP )
+Holder<--PE REST API: ( Status = e.g. SUBMITTED )
+PE REST API-->Verifier: [ Optional ] Notify Status ( Status = SUBMITTED )
 
+PE REST API<-Verifier: Get VP
+PE REST API-->Verifier: ( VP )
+Verifier-->Verifier: Evaluate Input (PD, Presentation i.e. 'P')
 
-Verifier->PE REST API: Get VP
-Verifier<--PE REST API: ( VP )
-
-
-Verifier->PE REST API: Update Status ( e.g. ACCEPTED )
-Verifier<--PE REST API: ( HTTP 200 OK )
+PE REST API<-Verifier: Update Status ( e.g. ACCEPTED )
+PE REST API-->Verifier: ( HTTP 200 OK )
 Holder<--PE REST API: [ Optional ] Notify Status ( e.g. ACCEPTED )
 
 Holder->PE REST API: [ Optional ] Update Status ( e.g. HOLDER_DECLINED )
 Holder<--PE REST API: ( HTTP 200 OK )
-Verifier<--PE REST API: [ Optional ] Notify Status ( Status e.g. HOLDER_DECLINED )
+PE REST API-->Verifier: [ Optional ] Notify Status ( Status e.g. HOLDER_DECLINED )
 
-Verifier->PE REST API: [ Optional ] Get Status
-Verifier<--PE REST API: ( Status e.g. SUBMITTED )
+PE REST API<-Verifier: [ Optional ] Get Status
+PE REST API-->Verifier: ( Status e.g. SUBMITTED )
+
+PE REST API<-Verifier: [ Optional ] Get Definition Statuses
+PE REST API-->Verifier: ( Status e.g. list of [SUBMITTED, ACCEPTED] etc. )
 
 Holder->PE REST API: [ Optional ] Get Status
 Holder<--PE REST API: ( Status e.g. ACCEPTED )
