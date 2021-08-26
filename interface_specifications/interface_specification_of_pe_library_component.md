@@ -222,3 +222,9 @@ interface ValidationReport {
 }
 ```
 `warnings` lists recommended structure violations and `errors` lists required structure violations according to the DIF PE specification.
+
+## Further work:
+1. Based on the [DIF documentation](https://identity.foundation/presentation-exchange/#input-evaluation)
+>*4.3.1- If the Input Descriptor schema object uri is a hashlink or similar value that points to immutable content, then the content of the retrieved schema must also match* This hashlink validation is currently not included.
+
+2. In the [DIF documentation](https://identity.foundation/presentation-exchange/#input-evaluation) some entries are addressing `nested credentials` and `nested paths` these are currently not fully support yet.
