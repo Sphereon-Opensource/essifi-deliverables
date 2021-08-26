@@ -112,18 +112,18 @@ const presentationDefinition = {
   ...
 };
 
-const {warnings: pdWarnings, errors: pdErrors} = pejs.validate(presentationDefinition);
+const {warnings: pdWarnings, errors: pdErrors} = pejs.validateDefinition(presentationDefinition);
 
 const presentationSubmission = {
   ...
 };
 
-const {warnings: psWarnings, errors: psErrors} = pejs.validate(presentationSubmission);
+const {warnings: psWarnings, errors: psErrors} = pejs.validateSubmission(presentationSubmission);
 ```
 
 ## API
 
-#### Evaluate
+### Evaluate
 ```typescript
 evaluate(presentationDefinition, verifiablePresentation)
 ```
@@ -146,7 +146,7 @@ interface EvaluationResults {
 }
 ```
 
-#### SelectFrom
+### SelectFrom
 ```typescript
 selectFrom(presentationDefinition, credentials, holderDid)
 ```
@@ -203,7 +203,10 @@ interface PresentationSubmission {
 
 ### Validation
 ```typescript
-validate(objToValidate)
+validateDefinition(objToValidate)
+```
+```typescript
+validateSubmission(objToValidate)
 ```
 #### Description
 A validation utility function for `PresentationDefinition` and `PresentationSubmission` objects.
@@ -214,11 +217,12 @@ A validation utility function for `PresentationDefinition` and `PresentationSubm
 | `objToValidate` | <code>PresentationDefinition &#124; PresentationSubmission</code> | the presentation definition or presentation definition to be validated |
 
 #### Return value 
-The `validate` method returns a validation report, with structure:
+The `validate` method returns a validated results array `NonEmptyArray<Checked>` , with structure:
 ```typescript
-interface ValidationReport {
-  warnings: string[];
-  errors: Error[];
+interface Checked {
+  tag: string;
+  status: Status;
+  message?: string;
 }
 ```
-`warnings` lists recommended structure violations and `errors` lists required structure violations according to the DIF PE specification.
+status can have following values `'info' | 'warn' | 'error'`
