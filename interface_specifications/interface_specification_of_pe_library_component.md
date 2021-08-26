@@ -11,10 +11,10 @@ The library can be installed direction from npmjs via:
 
 ```shell
 # install via yarn
-yarn add pe-js
+yarn add @sphereon/pe-js
 
 # install via npm
-npm install pe-js
+npm install @sphereon/pe-js
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ The core functionality of the DIF Presentation Exchange can be outlined as follo
 #### Input Evaluation
 Input evaluation is the primary mechanism by which a verifier determines whether a presentation submission from a holder matches the requested presentation definition from the request.
 ```typescript
-import pejs from 'pe-js';
+import pejs from '@sphereon/pe-js';
 
 const presentationDefinition = {
   "id": "32f54163-7166-48f1-93d8-ff217bdb0653",
@@ -64,7 +64,7 @@ const {value, warnings, errors} = pejs.evaluate(presentationDefinition, verifiab
 #### Credential Query
 A credential query allows holders to filter their set of credentials for matches to a given presentation definition.
 ```typescript
-import pejs from 'pe-js';
+import pejs from '@sphereon/pe-js';
 
 // Definition from verifier request
 const presentationDefinition = {
@@ -75,7 +75,7 @@ const presentationDefinition = {
 const credentials = await secureStore.getCredentials();
 
 // Find matching credentials
-const srMatches = pejs.selectFrom(presentationDefinition, credentials);
+const srMatches = pejs.selectFrom(presentationDefinition, credentials, holderDid);
 
 // An example that selects the first 'count' credentials from
 // the matches. in a real scenario, the user has to select what 
@@ -106,7 +106,7 @@ const presentation = {
 #### Utilities
 In addition to the core functionality above, the underlying validation methods are exposed as low-level helper functions.
 ```typescript
-import pejs from 'pe-js';
+import pejs from '@sphereon/pe-js';
 
 const presentationDefinition = {
   ...
@@ -148,7 +148,7 @@ interface EvaluationResults {
 
 #### SelectFrom
 ```typescript
-selectFrom(presentationDefinition, credentials)
+selectFrom(presentationDefinition, credentials, holderDid)
 ```
 ##### Description
 Gathers the matching credentials that fit a given presentation definition
@@ -158,6 +158,7 @@ Gathers the matching credentials that fit a given presentation definition
 |------|------|------------|
 | `presentationDefinition` | `PresentationDefinition` | the presentation definition that initiated the request from the verifier |
 | `credentials` | `VerifiableCredential[]` | the array of verifiable credentials to select from |
+| `holderDid` | `string` | the holder's did. this can be found in VerifiablePresentation's holder property |
 
 #### Return value
 If selection is successful or partially successful, `matches` will be a non-null array of `SubmissionRequirementMatch` object representing the matching credentials for each `SubmissionRequirement` in the `presentationDefinition` input parameter.
